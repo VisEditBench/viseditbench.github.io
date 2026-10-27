@@ -3,236 +3,116 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
-  <meta name="robots" content="index, follow">
+  <meta name="title" content="VisEditBench: A Benchmark for Vector-Format Diagram Editing with Visual Instructions">
+  <meta name="description" content="VisEditBench is a benchmark of 694 TikZ diagrams paired with human-drawn visual instructions, for evaluating how well multimodal models edit vector-format diagrams from annotations overlaid on the image.">
+  <meta name="keywords" content="VisEditBench, diagram editing, visual instruction, TikZ, vector graphics, multimodal large language models, benchmark, MLLM-as-a-judge">
+  <meta name="author" content="Akito Taneguchi, Haruto Yoshida, Jun Suzuki, Itsumi Saito">
+  <!-- TODO: Change to "index, follow" when the page is officially announced -->
+  <meta name="robots" content="noindex, nofollow">
   <meta name="language" content="English">
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
+  <meta property="og:site_name" content="VisEditBench">
+  <meta property="og:title" content="VisEditBench: A Benchmark for Vector-Format Diagram Editing with Visual Instructions">
+  <meta property="og:description" content="694 TikZ diagrams with human-drawn visual instructions for evaluating vector-format diagram editing by multimodal models.">
+  <meta property="og:url" content="https://viseditbench.github.io/">
+  <meta property="og:image" content="https://viseditbench.github.io/static/images/social_preview.png">
+  <meta property="og:image:alt" content="Text instruction vs. visual instruction for diagram editing">
+  <meta property="article:author" content="Akito Taneguchi">
   <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
+  <meta property="article:tag" content="diagram editing">
+  <meta property="article:tag" content="visual instruction">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta name="twitter:title" content="VisEditBench: A Benchmark for Vector-Format Diagram Editing with Visual Instructions">
+  <meta name="twitter:description" content="694 TikZ diagrams with human-drawn visual instructions for evaluating vector-format diagram editing by multimodal models.">
+  <meta name="twitter:image" content="https://viseditbench.github.io/static/images/social_preview.png">
+  <meta name="twitter:image:alt" content="Text instruction vs. visual instruction for diagram editing">
 
   <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
+  <meta name="citation_title" content="VisEditBench: A Benchmark for Vector-Format Diagram Editing with Visual Instructions">
+  <meta name="citation_author" content="Taneguchi, Akito">
+  <meta name="citation_author" content="Yoshida, Haruto">
+  <meta name="citation_author" content="Suzuki, Jun">
+  <meta name="citation_author" content="Saito, Itsumi">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="Advances in Neural Information Processing Systems (NeurIPS 2026)">
+  <!-- TODO: Add citation_pdf_url once the paper PDF is public -->
+
   <!-- Additional SEO -->
   <meta name="theme-color" content="#2563eb">
   <meta name="msapplication-TileColor" content="#2563eb">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
+
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
+  <title>VisEditBench: A Benchmark for Vector-Format Diagram Editing with Visual Instructions</title>
 
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
-  
   <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
+  <link rel="icon" type="image/svg+xml" href="static/images/favicon.svg">
+  <link rel="apple-touch-icon" href="static/images/favicon.svg">
+
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
+  <link rel="stylesheet" href="static/css/viseditbench.css">
+
   <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
+
   <!-- Fallback for browsers that don't support preload -->
   <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
-  
+
   <!-- Fonts - Optimized loading -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
+
   <!-- Defer non-critical JavaScript -->
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
   <script defer src="static/js/bulma-carousel.min.js"></script>
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
-  
+  <script defer src="static/js/viseditbench.js"></script>
+
   <!-- Structured Data for Academic Papers -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "headline": "VisEditBench: A Benchmark for Vector-Format Diagram Editing with Visual Instructions",
+    "description": "A benchmark of 694 TikZ diagrams paired with human-drawn visual instructions for evaluating vector-format diagram editing by multimodal models.",
     "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      }
+      {"@type": "Person", "name": "Akito Taneguchi", "affiliation": {"@type": "Organization", "name": "Tohoku University"}},
+      {"@type": "Person", "name": "Haruto Yoshida", "affiliation": {"@type": "Organization", "name": "Tohoku University"}},
+      {"@type": "Person", "name": "Jun Suzuki", "affiliation": [{"@type": "Organization", "name": "Tohoku University"}, {"@type": "Organization", "name": "RIKEN"}, {"@type": "Organization", "name": "NII LLMC"}]},
+      {"@type": "Person", "name": "Itsumi Saito", "affiliation": [{"@type": "Organization", "name": "Tohoku University"}, {"@type": "Organization", "name": "Institute of Science Tokyo"}, {"@type": "Organization", "name": "RIKEN"}]}
     ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
-    "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
-  }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
+    "datePublished": "2026",
+    "publisher": {"@type": "Organization", "name": "NeurIPS 2026"},
+    "url": "https://viseditbench.github.io/",
+    "image": "https://viseditbench.github.io/static/images/social_preview.png",
+    "keywords": ["diagram editing", "visual instruction", "TikZ", "vector graphics", "multimodal large language models", "benchmark"],
+    "isAccessibleForFree": true
   }
   </script>
 </head>
 <body>
 
-
   <!-- Scroll to Top Button -->
   <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
     <i class="fas fa-chevron-up"></i>
   </button>
-
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
 
   <main id="main-content">
   <section class="hero">
@@ -240,97 +120,101 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">
+              <span class="vb-name">VisEditBench</span>: A Benchmark for Vector-Format Diagram Editing with Visual Instructions
+            </h1>
+            <!-- TODO: Add personal links to each author name if desired -->
             <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+              <span class="author-block">Akito Taneguchi<sup>1,*</sup>,</span>
+              <span class="author-block">Haruto Yoshida<sup>1</sup>,</span>
+              <span class="author-block">Jun Suzuki<sup>1,3,4</sup>,</span>
+              <span class="author-block">Itsumi Saito<sup>1,2,3,*</sup></span>
+            </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+            <div class="is-size-6 publication-authors vb-affiliations">
+              <span class="author-block"><sup>1</sup>Tohoku University</span>
+              <span class="author-block"><sup>2</sup>Institute of Science Tokyo</span>
+              <span class="author-block"><sup>3</sup>RIKEN</span>
+              <span class="author-block"><sup>4</sup>NII LLMC</span>
+            </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
+            <div class="vb-venue">NeurIPS 2026 &middot; Evaluations &amp; Datasets Track</div>
+            <div class="is-size-6 publication-authors">
+              <span class="eql-cntrb"><small><sup>*</sup>Indicates Equal Contribution</small></span>
+            </div>
 
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- TODO: Replace with the paper PDF link and remove "is-coming-soon" -->
+                <span class="link-block">
+                  <a class="external-link button is-normal is-rounded is-dark is-coming-soon" aria-disabled="true" title="Coming soon">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper</span>
+                  </a>
+                </span>
 
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
+                <!-- TODO: Replace with the arXiv abstract link and remove "is-coming-soon" -->
+                <span class="link-block">
+                  <a class="external-link button is-normal is-rounded is-dark is-coming-soon" aria-disabled="true" title="Coming soon">
+                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+                <!-- TODO: Replace with the GitHub repository link and remove "is-coming-soon" -->
+                <span class="link-block">
+                  <a class="external-link button is-normal is-rounded is-dark is-coming-soon" aria-disabled="true" title="Coming soon">
+                    <span class="icon"><i class="fab fa-github"></i></span>
                     <span>Code</span>
                   </a>
                 </span>
 
-                <!-- TODO: Update with your arXiv paper ID -->
+                <!-- TODO: Replace with the dataset link (e.g., Hugging Face) and remove "is-coming-soon" -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+                  <a class="external-link button is-normal is-rounded is-dark is-coming-soon" aria-disabled="true" title="Coming soon">
+                    <span class="icon"><i class="fas fa-database"></i></span>
+                    <span>Dataset</span>
+                  </a>
+                </span>
+              </div>
+              <p class="vb-coming-soon-note">Paper, code, and dataset links are coming soon.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- Teaser video-->
+<!-- Teaser figure -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
+      <img src="static/images/figures/teaser.png" class="vb-figure" alt="Text-only instruction versus visual instruction for diagram editing: in the visual setting, the user circles nodes B and S and writes 'Change the node color to red' directly on the diagram.">
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        Instead of describing an edit in verbose text, a <strong>visual instruction</strong> draws it directly on the diagram.
+        <span class="vb-name">VisEditBench</span> asks a model to read these annotations and apply them to the diagram's <strong>TikZ source code</strong>.
       </h2>
     </div>
   </div>
 </section>
-<!-- End teaser video -->
+<!-- End teaser figure -->
+
+
+<!-- Key numbers -->
+<section class="section vb-stats-section">
+  <div class="container is-max-desktop">
+    <div class="vb-stats">
+      <div class="vb-stat"><div class="vb-stat-value">694</div><div class="vb-stat-label">human-curated samples</div></div>
+      <div class="vb-stat"><div class="vb-stat-value">5</div><div class="vb-stat-label">edit types</div></div>
+      <div class="vb-stat"><div class="vb-stat-value">1&ndash;3</div><div class="vb-stat-label">edit operations per instruction</div></div>
+      <div class="vb-stat"><div class="vb-stat-value">18</div><div class="vb-stat-label">annotators</div></div>
+      <div class="vb-stat"><div class="vb-stat-value">32</div><div class="vb-stat-label">models evaluated</div></div>
+    </div>
+  </div>
+</section>
+<!-- End key numbers -->
+
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -339,9 +223,16 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            We introduce a new task and benchmark dataset, <span class="vb-name">VisEditBench</span>, for understanding visual instructions in vector-format diagram editing.
+            While recent advances have made progress in generating vector graphics from text or images, editing such diagrams remains relatively underexplored.
+            Moreover, existing approaches predominantly rely on textual instructions, which are often unintuitive for specifying edits in structured visual content, particularly when users need to identify specific elements or indicate their spatial positions in a diagram.
+            We propose visual instructions as a more intuitive interface for diagram editing, and construct a dataset of 694 samples with human-curated annotations overlaid on TikZ diagrams.
+            The dataset covers multiple edit types as well as instructions with multiple editing operations.
+            We evaluate 32 recent state-of-the-art multimodal models and observe consistent performance degradation for edits involving global layout or diagram structure, compared to local operations such as element deletion or modification.
+            Furthermore, instructions that include multiple editing operations tend to result in lower performance than single-edit cases.
+            Even recent models struggle to achieve consistently accurate edits, highlighting the inherent difficulty of the task.
+            <span class="vb-name">VisEditBench</span> provides a valuable benchmark for advancing research on visually grounded diagram editing and structured visual understanding.
           </p>
         </div>
       </div>
@@ -351,127 +242,435 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
+<!-- Task definition -->
+<section class="section" id="task">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Task: Diagram Editing with Visual Instructions</h2>
+    <div class="content has-text-justified">
+      <p>
+        Given an original diagram image <i>D</i><sub>orig</sub>, its TikZ code <i>C</i><sub>orig</sub>, and a
+        <strong>visual instruction</strong> image <i>I</i><sub>vis</sub> that overlays annotations such as arrows, sketches,
+        and handwritten notes on <i>D</i><sub>orig</sub>, the model must produce modified TikZ code <i>C</i><sub>edit</sub> whose
+        rendered diagram <i>D</i><sub>edit</sub> faithfully reflects the intended edits.
+      </p>
+      <p>
+        Visual instructions let users point at the exact element to change, or sketch where it should go, without
+        writing a long description. To follow them, a model has to work out <em>which</em> element is targeted,
+        <em>what</em> spatial relationship is intended, and <em>where</em> that element lives in the source code.
+      </p>
     </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
+    <div class="vb-io">
+      <div class="vb-io-block">
+        <div class="vb-io-title">Input</div>
+        <ul>
+          <li>Original diagram image <i>D</i><sub>orig</sub></li>
+          <li>Original TikZ code <i>C</i><sub>orig</sub></li>
+          <li>Visual instruction image <i>I</i><sub>vis</sub></li>
+        </ul>
+      </div>
+      <div class="vb-io-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></div>
+      <div class="vb-io-block">
+        <div class="vb-io-title">Output</div>
+        <ul>
+          <li>Edited TikZ code <i>C</i><sub>edit</sub></li>
+          <li>Rendered edited diagram <i>D</i><sub>edit</sub></li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
+<!-- End task definition -->
 
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
+<!-- Dataset construction -->
+<section class="section hero is-light" id="dataset">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Dataset Construction</h2>
+    <img src="static/images/figures/construction_pipeline.png" class="vb-figure" loading="lazy" alt="Two-step construction pipeline: Step 1 uses MLLMs to generate textual editing instructions and edited diagrams from TikZ diagrams; Step 2 has annotators draw visual instructions on the original diagram while referencing the edited diagram.">
+    <div class="content has-text-justified vb-after-figure">
+      <p>
+        Real-world diagram editing data is rarely recorded, so we build <span class="vb-name">VisEditBench</span> from existing TikZ diagrams
+        in the Stack Exchange subset of <a href="https://huggingface.co/datasets/nllg/datikz-v2" target="_blank">DaTikZ-v2</a>.
+      </p>
+      <ol>
+        <li>
+          <strong>Step 1: textual instructions and edited diagrams.</strong>
+          Gemini 3 Pro Preview generates a textual editing instruction for each diagram, given a target edit type and
+          a required number of edit operations (1&ndash;3). Several proprietary LLMs (Gemini 3 Pro Preview, GPT-5.2,
+          GPT-5-mini, and Claude Sonnet 4.5) then apply the instruction to the TikZ code with minimal changes.
+          Annotators checked 2,819 generated examples, and 2,148 (76.2%) met all quality criteria.
+        </li>
+        <li>
+          <strong>Step 2: visual instructions.</strong>
+          Annotators look at each original/edited diagram pair and draw a visual instruction on the original diagram in
+          <a href="https://excalidraw.com/" target="_blank">Excalidraw</a>, either freehand (pen) or with built-in shapes (tool).
+          The final dataset contains 694 triplets (<i>D</i><sub>orig</sub>, <i>I</i><sub>vis</sub>, <i>D</i><sub>edit</sub>), annotated by 18 annotators.
+        </li>
+      </ol>
+    </div>
+
+    <div class="columns is-vcentered vb-stats-row">
+      <div class="column is-7">
+        <img src="static/images/figures/dataset_stats.png" class="vb-figure" loading="lazy" alt="Donut charts: edit operations are 34% one edit, 34% two edits, 32% three edits; edit types are ADD 20%, REMOVE 18%, UPDATE 23%, LAYOUT 15%, STRUCTURE 24%.">
+      </div>
+      <div class="column is-5">
+        <div class="table-container">
+          <table class="table is-fullwidth is-narrow vb-small-table">
+            <thead>
+              <tr><th>Edit type</th><th>Scope</th><th class="has-text-right">#</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="vb-tag tag-add">ADD</span></td><td>Local</td><td class="has-text-right">140</td></tr>
+              <tr><td><span class="vb-tag tag-remove">REMOVE</span></td><td>Local</td><td class="has-text-right">124</td></tr>
+              <tr><td><span class="vb-tag tag-update">UPDATE</span></td><td>Local</td><td class="has-text-right">160</td></tr>
+              <tr><td><span class="vb-tag tag-layout">LAYOUT</span></td><td>Global</td><td class="has-text-right">103</td></tr>
+              <tr><td><span class="vb-tag tag-structure">STRUCTURE</span></td><td>Global</td><td class="has-text-right">167</td></tr>
+            </tbody>
+            <tfoot>
+              <tr><th colspan="2">Total</th><th class="has-text-right">694</th></tr>
+            </tfoot>
+          </table>
         </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
+        <p class="vb-note">
+          UPDATE has ten fine-grained subtypes (e.g., text, line, and fill properties).
+          1 / 2 / 3 edit operations: 236 / 234 / 224 samples.
+          Pen / tool annotations: 406 / 288 samples.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End dataset construction -->
+
+
+<!-- Visual instruction examples -->
+<section class="section" id="examples">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Visual Instruction Examples</h2>
+    <p class="vb-lead">Examples of visual instructions for each edit type, with one to three edit operations per instruction.</p>
+
+    <div class="tabs is-centered is-toggle is-small vb-tabs" data-tab-group="vi">
+      <ul>
+        <li class="is-active"><a data-tab="add">ADD</a></li>
+        <li><a data-tab="remove">REMOVE</a></li>
+        <li><a data-tab="update">UPDATE</a></li>
+        <li><a data-tab="layout">LAYOUT</a></li>
+        <li><a data-tab="structure">STRUCTURE</a></li>
+      </ul>
+    </div>
+
+    <div class="vb-tab-panels" data-tab-group="vi">
+      <div class="vb-tab-panel is-active" data-panel="add">
+        <div class="columns is-multiline">
+          <figure class="column is-4 vb-example"><img src="static/images/visual_instruction/add_1.png" loading="lazy" alt="ADD visual instruction with one edit operation"><figcaption>1 edit operation</figcaption></figure>
+          <figure class="column is-4 vb-example"><img src="static/images/visual_instruction/add_2.png" loading="lazy" alt="ADD visual instruction with two edit operations"><figcaption>2 edit operations</figcaption></figure>
+          <figure class="column is-4 vb-example"><img src="static/images/visual_instruction/add_3.png" loading="lazy" alt="ADD visual instruction with three edit operations"><figcaption>3 edit operations</figcaption></figure>
         </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
+      </div>
+      <div class="vb-tab-panel" data-panel="remove">
+        <div class="columns is-multiline">
+          <figure class="column is-4 vb-example"><img src="static/images/visual_instruction/remove_1.png" loading="lazy" alt="REMOVE visual instruction with one edit operation"><figcaption>1 edit operation</figcaption></figure>
+          <figure class="column is-4 vb-example"><img src="static/images/visual_instruction/remove_2.png" loading="lazy" alt="REMOVE visual instruction with two edit operations"><figcaption>2 edit operations</figcaption></figure>
+          <figure class="column is-4 vb-example"><img src="static/images/visual_instruction/remove_3.png" loading="lazy" alt="REMOVE visual instruction with three edit operations"><figcaption>3 edit operations</figcaption></figure>
+        </div>
+      </div>
+      <div class="vb-tab-panel" data-panel="update">
+        <div class="columns is-multiline">
+          <figure class="column is-4 vb-example"><img src="static/images/visual_instruction/update_1.png" loading="lazy" alt="UPDATE visual instruction with one edit operation"><figcaption>1 edit operation</figcaption></figure>
+          <figure class="column is-4 vb-example"><img src="static/images/visual_instruction/update_2.png" loading="lazy" alt="UPDATE visual instruction with two edit operations"><figcaption>2 edit operations</figcaption></figure>
+          <figure class="column is-4 vb-example"><img src="static/images/visual_instruction/update_3.png" loading="lazy" alt="UPDATE visual instruction with three edit operations"><figcaption>3 edit operations</figcaption></figure>
+        </div>
+      </div>
+      <div class="vb-tab-panel" data-panel="layout">
+        <div class="columns is-multiline">
+          <figure class="column is-4 vb-example"><img src="static/images/visual_instruction/layout_1.png" loading="lazy" alt="LAYOUT visual instruction with one edit operation"><figcaption>1 edit operation</figcaption></figure>
+          <figure class="column is-4 vb-example"><img src="static/images/visual_instruction/layout_2.png" loading="lazy" alt="LAYOUT visual instruction with two edit operations"><figcaption>2 edit operations</figcaption></figure>
+          <figure class="column is-4 vb-example"><img src="static/images/visual_instruction/layout_3.png" loading="lazy" alt="LAYOUT visual instruction with three edit operations"><figcaption>3 edit operations</figcaption></figure>
+        </div>
+      </div>
+      <div class="vb-tab-panel" data-panel="structure">
+        <div class="columns is-multiline">
+          <figure class="column is-4 vb-example"><img src="static/images/visual_instruction/structure_1.png" loading="lazy" alt="STRUCTURE visual instruction with one edit operation"><figcaption>1 edit operation</figcaption></figure>
+          <figure class="column is-4 vb-example"><img src="static/images/visual_instruction/structure_2.png" loading="lazy" alt="STRUCTURE visual instruction with two edit operations"><figcaption>2 edit operations</figcaption></figure>
+          <figure class="column is-4 vb-example"><img src="static/images/visual_instruction/structure_3.png" loading="lazy" alt="STRUCTURE visual instruction with three edit operations"><figcaption>3 edit operations</figcaption></figure>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End video carousel -->
+<!-- End visual instruction examples -->
 
 
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
+<!-- Evaluation -->
+<section class="section hero is-light" id="evaluation">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Evaluation</h2>
+    <div class="content has-text-justified">
+      <p>
+        The final visual result matters most, so image-level evaluation is the primary measure and code-level evaluation
+        is supplementary. Each image-level aspect is rated on a 5-point scale; if compilation fails, all three aspects get the minimum score of 1.
+      </p>
+    </div>
+    <div class="columns">
+      <div class="column">
+        <div class="vb-card">
+          <h3 class="vb-card-title">Image-level <span class="vb-card-badge">primary</span></h3>
+          <dl class="vb-metrics">
+            <dt>IA &mdash; Instruction Adherence</dt><dd>How well the edited diagram follows the instruction.</dd>
+            <dt>CP &mdash; Content Preservation</dt><dd>Whether it avoids unintended changes beyond the instruction.</dd>
+            <dt>DR &mdash; Diagram Readability</dt><dd>Whether it stays readable, e.g., no overlapping elements or text.</dd>
+            <dt>FSR &mdash; Full-score Rate</dt><dd>Share of samples that score 5 on all of IA, CP, and DR.</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="column">
+        <div class="vb-card">
+          <h3 class="vb-card-title">Code-level <span class="vb-card-badge is-secondary">supplementary</span></h3>
+          <dl class="vb-metrics">
+            <dt>CFR &mdash; Compile Failure Rate</dt><dd>Share of generated code that fails to render.</dd>
+            <dt>IA / CP &mdash; on code</dt><dd>Instruction adherence and content preservation, judged from the diff of <i>C</i><sub>orig</sub>, <i>C</i><sub>edit</sub>, and <i>C</i><sub>gen</sub>.</dd>
+            <dt>OES &mdash; Overall Edit Score</dt><dd>A holistic score combining code-level IA and CP.</dd>
+          </dl>
+        </div>
       </div>
     </div>
-  </section>
-<!--End paper poster -->
+    <div class="content has-text-justified">
+      <p>
+        <strong>MLLM-as-a-judge agrees with humans.</strong>
+        Five Amazon Mechanical Turk workers rated each of 300 sampled outputs.
+        Among the candidate judges, Gemini 3.1 Pro agreed most closely with human scores
+        (Spearman's &rho; = 0.843 / 0.813 / 0.793 for IA / CP / DR), so it serves as the judge for all main results.
+        Inter-annotator agreement (Krippendorff's &alpha;) was 0.80, 0.67, and 0.65 for IA, CP, and DR, respectively.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- End evaluation -->
 
+
+<!-- Leaderboard -->
+<section class="section" id="leaderboard">
+  <div class="container">
+    <div class="vb-leaderboard-wrap">
+      <h2 class="title is-3">Main Results</h2>
+      <p class="vb-lead">
+        Results for 29 code-editing models on <span class="vb-name">VisEditBench</span>, judged by Gemini 3.1 Pro.
+        Click a column header to sort.
+        <span class="vb-legend"><span class="vb-swatch best"></span>best overall</span>
+        <span class="vb-legend"><span class="vb-swatch best-open"></span>best open-source</span>
+      </p>
+      <div class="vb-sort-controls">
+        <button class="button is-small is-rounded vb-reset-sort" type="button">Reset to grouped view</button>
+      </div>
+      <div class="table-container">
+        <table class="table is-fullwidth is-hoverable vb-leaderboard" id="leaderboard-table">
+          <thead>
+            <tr class="vb-header-group">
+              <th></th>
+              <th colspan="4" class="has-text-centered">Image-level</th>
+              <th colspan="4" class="has-text-centered">Code-level</th>
+            </tr>
+            <tr>
+              <th data-sort="text">Model</th>
+              <th data-sort="desc" title="Instruction Adherence">IA&nbsp;&uarr;</th>
+              <th data-sort="desc" title="Content Preservation">CP&nbsp;&uarr;</th>
+              <th data-sort="desc" title="Diagram Readability">DR&nbsp;&uarr;</th>
+              <th data-sort="desc" title="Full-score Rate (%)">FSR&nbsp;&uarr;</th>
+              <th data-sort="asc" title="Compile Failure Rate (%)">CFR&nbsp;&darr;</th>
+              <th data-sort="desc" title="Instruction Adherence (code)">IA&nbsp;&uarr;</th>
+              <th data-sort="desc" title="Content Preservation (code)">CP&nbsp;&uarr;</th>
+              <th data-sort="desc" title="Overall Edit Score">OES&nbsp;&uarr;</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="group-row"><td colspan="9">Closed-source models</td></tr>
+            <tr data-group="closed"><td class="model">GPT-5.4</td><td class="num">4.329</td><td class="num">4.036</td><td class="num">4.542</td><td class="num">47.26</td><td class="num">0.72</td><td class="num">3.751</td><td class="num">3.679</td><td class="num">3.390</td></tr>
+            <tr data-group="closed"><td class="model">GPT-5.4-mini</td><td class="num">3.063</td><td class="num">3.362</td><td class="num">4.241</td><td class="num">18.16</td><td class="num">1.73</td><td class="num">2.575</td><td class="num">3.059</td><td class="num">2.298</td></tr>
+            <tr data-group="closed"><td class="model">GPT-5.4-nano</td><td class="num">1.856</td><td class="num">2.977</td><td class="num">3.915</td><td class="num">4.611</td><td class="num">3.17</td><td class="num">1.579</td><td class="num">2.767</td><td class="num">1.439</td></tr>
+            <tr data-group="closed"><td class="model">Gemini 3.1 Pro Preview</td><td class="num best">4.945</td><td class="num best">4.797</td><td class="num best">4.945</td><td class="num best">83.57</td><td class="num best">0.00</td><td class="num best">4.490</td><td class="num best">4.614</td><td class="num best">4.329</td></tr>
+            <tr data-group="closed"><td class="model">Gemini 3 Flash Preview</td><td class="num">4.643</td><td class="num">4.398</td><td class="num">4.624</td><td class="num">71.76</td><td class="num">0.86</td><td class="num">4.347</td><td class="num">4.133</td><td class="num">3.984</td></tr>
+            <tr data-group="closed"><td class="model">Gemini 3.1 Flash Lite Preview</td><td class="num">4.408</td><td class="num">3.916</td><td class="num">4.503</td><td class="num">44.81</td><td class="num">1.01</td><td class="num">3.816</td><td class="num">3.442</td><td class="num">3.273</td></tr>
+            <tr data-group="closed"><td class="model">Claude Opus 4.6</td><td class="num">4.382</td><td class="num">4.438</td><td class="num">4.797</td><td class="num">59.94</td><td class="num">0.58</td><td class="num">3.780</td><td class="num">4.190</td><td class="num">3.638</td></tr>
+            <tr data-group="closed"><td class="model">Claude Sonnet 4.5</td><td class="num">4.176</td><td class="num">4.105</td><td class="num">4.731</td><td class="num">42.36</td><td class="num">0.58</td><td class="num">3.516</td><td class="num">3.834</td><td class="num">3.280</td></tr>
+            <tr data-group="closed"><td class="model">Claude Haiku 4.5</td><td class="num">3.219</td><td class="num">3.617</td><td class="num">4.318</td><td class="num">25.22</td><td class="num">2.16</td><td class="num">2.895</td><td class="num">3.526</td><td class="num">2.686</td></tr>
+            <tr class="group-row"><td colspan="9">Open-source models</td></tr>
+            <tr data-group="open"><td class="model">Qwen3.5-4B</td><td class="num">2.532</td><td class="num">2.641</td><td class="num">3.318</td><td class="num">12.25</td><td class="num">9.22</td><td class="num">2.141</td><td class="num">2.349</td><td class="num">1.859</td></tr>
+            <tr data-group="open"><td class="model">Qwen3.5-4B Thinking</td><td class="num">3.380</td><td class="num">3.075</td><td class="num">3.624</td><td class="num">28.09</td><td class="num">9.22</td><td class="num">2.932</td><td class="num">2.934</td><td class="num">2.570</td></tr>
+            <!-- NOTE: FSR is written as "14/12" in tables/main_results_r3.tex; assumed to be 14.12 -->
+            <tr data-group="open"><td class="model">Qwen3.5-9B</td><td class="num">2.713</td><td class="num">2.763</td><td class="num">3.555</td><td class="num">14.12</td><td class="num">7.78</td><td class="num">2.248</td><td class="num">2.514</td><td class="num">1.941</td></tr>
+            <tr data-group="open"><td class="model">Qwen3.5-9B Thinking</td><td class="num">3.912</td><td class="num">3.513</td><td class="num">4.045</td><td class="num">38.04</td><td class="num">4.47</td><td class="num">3.458</td><td class="num">3.461</td><td class="num">3.102</td></tr>
+            <tr data-group="open"><td class="model">Qwen3.5-35B-A3B</td><td class="num">3.630</td><td class="num">3.653</td><td class="num">4.324</td><td class="num">31.12</td><td class="num">1.15</td><td class="num">3.020</td><td class="num">3.405</td><td class="num">2.742</td></tr>
+            <tr data-group="open"><td class="model">Qwen3.5-35B-A3B Thinking</td><td class="num">4.403</td><td class="num">4.046</td><td class="num">4.460</td><td class="num">53.89</td><td class="num">1.73</td><td class="num">3.860</td><td class="num">3.847</td><td class="num">3.503</td></tr>
+            <tr data-group="open"><td class="model">Qwen3.5-397B-A17B</td><td class="num">3.829</td><td class="num">4.195</td><td class="num">4.591</td><td class="num">38.04</td><td class="num">0.87</td><td class="num">3.333</td><td class="num">4.039</td><td class="num">3.159</td></tr>
+            <tr data-group="open"><td class="model">Qwen3.5-397B-A17B Thinking</td><td class="num best-open">4.679</td><td class="num best-open">4.451</td><td class="num best-open">4.725</td><td class="num best-open">66.28</td><td class="num best-open">0.72</td><td class="num best-open">4.140</td><td class="num best-open">4.206</td><td class="num best-open">3.892</td></tr>
+            <tr data-group="open"><td class="model">Qwen3-VL-4B-Instruct</td><td class="num">2.468</td><td class="num">3.732</td><td class="num">4.389</td><td class="num">12.82</td><td class="num">3.03</td><td class="num">2.078</td><td class="num">3.625</td><td class="num">1.977</td></tr>
+            <tr data-group="open"><td class="model">Qwen3-VL-4B-Thinking</td><td class="num">3.673</td><td class="num">3.406</td><td class="num">4.033</td><td class="num">29.97</td><td class="num">4.03</td><td class="num">3.102</td><td class="num">3.305</td><td class="num">2.805</td></tr>
+            <tr data-group="open"><td class="model">Qwen3-VL-8B-Instruct</td><td class="num">2.918</td><td class="num">3.656</td><td class="num">4.422</td><td class="num">17.86</td><td class="num">2.16</td><td class="num">2.416</td><td class="num">3.409</td><td class="num">2.284</td></tr>
+            <tr data-group="open"><td class="model">Qwen3-VL-8B-Thinking</td><td class="num">3.690</td><td class="num">3.406</td><td class="num">4.076</td><td class="num">30.84</td><td class="num">2.16</td><td class="num">3.235</td><td class="num">3.375</td><td class="num">2.924</td></tr>
+            <tr data-group="open"><td class="model">Qwen3-VL-30B-A3B-Instruct</td><td class="num">2.660</td><td class="num">4.251</td><td class="num">4.586</td><td class="num">18.73</td><td class="num">1.44</td><td class="num">2.304</td><td class="num">4.075</td><td class="num">2.258</td></tr>
+            <tr data-group="open"><td class="model">Qwen3-VL-30B-A3B-Thinking</td><td class="num">4.105</td><td class="num">3.867</td><td class="num">4.441</td><td class="num">42.07</td><td class="num">1.44</td><td class="num">3.481</td><td class="num">3.722</td><td class="num">3.220</td></tr>
+            <tr data-group="open"><td class="model">Qwen3-VL-235B-A22B-Instruct</td><td class="num">3.824</td><td class="num">4.023</td><td class="num">4.558</td><td class="num">36.02</td><td class="num">2.31</td><td class="num">3.282</td><td class="num">3.829</td><td class="num">3.086</td></tr>
+            <tr data-group="open"><td class="model">Qwen3-VL-235B-A22B-Thinking</td><td class="num">3.572</td><td class="num">3.414</td><td class="num">3.925</td><td class="num">35.73</td><td class="num">1.59</td><td class="num">3.615</td><td class="num">3.595</td><td class="num">3.203</td></tr>
+            <tr data-group="open"><td class="model">Gemma-4-E4B-IT</td><td class="num">2.545</td><td class="num">2.421</td><td class="num">3.344</td><td class="num">6.05</td><td class="num">4.90</td><td class="num">2.058</td><td class="num">2.186</td><td class="num">1.637</td></tr>
+            <tr data-group="open"><td class="model">Gemma-4-31B-IT</td><td class="num">3.976</td><td class="num">4.039</td><td class="num">4.389</td><td class="num">43.52</td><td class="num">1.59</td><td class="num">3.627</td><td class="num">3.854</td><td class="num">3.352</td></tr>
+            <tr data-group="open"><td class="model">GLM-4.5V</td><td class="num">3.875</td><td class="num">3.710</td><td class="num">4.290</td><td class="num">38.33</td><td class="num">3.75</td><td class="num">3.336</td><td class="num">3.553</td><td class="num">3.078</td></tr>
+            <tr data-group="open"><td class="model">GLM-4.6V</td><td class="num">3.951</td><td class="num">3.973</td><td class="num">4.477</td><td class="num">40.49</td><td class="num">1.59</td><td class="num">3.352</td><td class="num">3.733</td><td class="num">3.143</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="content vb-findings">
+        <ul>
+          <li><strong>The task is hard even for frontier models.</strong> Gemini 3.1 Pro leads with 83.6 FSR, but GPT-5.4 (47.3) and Claude Opus 4.6 (59.9) leave substantial room for improvement.</li>
+          <li><strong>Performance drops sharply with model size</strong> across the GPT, Claude, and Qwen3.5 families.</li>
+          <li><strong>Open models are catching up.</strong> Qwen3.5-397B-A17B Thinking reaches 66.3 FSR, competitive with closed-source models, and the Qwen3.5 series improves substantially over Qwen3-VL.</li>
+          <li><strong>Avoiding unintended edits is harder than following the instruction.</strong> CP is often lower than IA, and thinking raises IA while sometimes lowering CP.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End leaderboard -->
+
+
+<!-- Analysis -->
+<section class="section hero is-light" id="analysis">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Analysis</h2>
+
+    <div class="vb-analysis">
+      <h3 class="title is-5">Global edits are harder than local ones</h3>
+      <img src="static/images/figures/edit_type_heatmap.png" class="vb-figure" loading="lazy" alt="Heatmap of FSR by edit type and model; UPDATE and REMOVE scores are generally higher than LAYOUT and STRUCTURE.">
+      <p>
+        Local edits such as REMOVE and UPDATE score high for many models, while LAYOUT and STRUCTURE edits are much harder,
+        especially for weaker models. Failures there come from misreading the target, its spatial relationships, or the intended
+        scope of the edit, and from failing to ground them in the right part of the source code.
+      </p>
+    </div>
+
+    <div class="columns vb-analysis">
+      <div class="column">
+        <h3 class="title is-5">More operations, lower scores</h3>
+        <img src="static/images/figures/edit_operation_fsr.png" class="vb-figure" loading="lazy" alt="FSR by number of edit operations (1, 2, 3) for each model; most models decline as operations increase.">
+        <p>FSR generally falls as the number of edit operations grows. Gemini 3.1 Pro and Gemini 3 Flash change little.</p>
+      </div>
+      <div class="column">
+        <h3 class="title is-5">The source code matters most</h3>
+        <img src="static/images/figures/input_modality_fsr.png" class="vb-figure" loading="lazy" alt="FSR under different input modalities; removing the original TikZ code causes the largest drop.">
+        <p>Removing the original TikZ code <i>C</i><sub>orig</sub> causes the largest drop. Inferring and editing TikZ from the image alone remains difficult.</p>
+      </div>
+    </div>
+
+    <div class="columns vb-analysis">
+      <div class="column">
+        <h3 class="title is-5">Visual instructions are harder to follow than text</h3>
+        <img src="static/images/figures/text_vs_visual_fsr.png" class="vb-figure" loading="lazy" alt="FSR with textual versus visual instructions; textual is higher for every model, with smaller gaps for stronger models.">
+        <p>Textual instructions beat visual ones for every model, though the gap narrows for stronger models. The model has to infer the target and scope from the annotations itself.</p>
+      </div>
+      <div class="column">
+        <h3 class="title is-5">Editing code beats editing pixels</h3>
+        <img src="static/images/figures/code_vs_image_fsr.png" class="vb-figure" loading="lazy" alt="FSR of code-based editing versus direct image editing for each model series; code-based is higher.">
+        <p>Code-based editing outperforms direct image editing within each model series. Gemini 3 Pro Image reaches 60.8 FSR, versus 12.0 for GPT Image 1.5 and 0.1 for Qwen-Image-Edit.</p>
+      </div>
+    </div>
+
+    <div class="vb-analysis">
+      <h3 class="title is-5">Verbalizing the visual instruction helps</h3>
+      <img src="static/images/figures/verbalization_fsr.png" class="vb-figure" loading="lazy" alt="FSR under four prompting conditions across 16 model configurations: visual only, visual then verbalized text, gold text, and visual plus text.">
+      <p>
+        Having the model first describe the visual instruction in text (<i>I</i><sub>vis</sub> &rarr; <i>&Icirc;</i><sub>text</sub>)
+        improves FSR over <i>I</i><sub>vis</sub> alone in 15 of 16 model configurations. Gold textual instructions still do better overall.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- End analysis -->
+
+
+<!-- Qualitative examples -->
+<section class="section" id="qualitative">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Qualitative Examples</h2>
+    <p class="vb-lead">Successful and failed model edits for each edit type.</p>
+
+    <div class="tabs is-centered is-toggle is-small vb-tabs" data-tab-group="qual">
+      <ul>
+        <li class="is-active"><a data-tab="add">ADD</a></li>
+        <li><a data-tab="remove">REMOVE</a></li>
+        <li><a data-tab="update">UPDATE</a></li>
+        <li><a data-tab="layout">LAYOUT</a></li>
+        <li><a data-tab="structure">STRUCTURE</a></li>
+      </ul>
+    </div>
+
+    <div class="vb-tab-panels" data-tab-group="qual">
+      <div class="vb-tab-panel is-active" data-panel="add">
+        <div class="vb-triplet"><span class="vb-result is-success"><i class="fas fa-check"></i> Success</span>
+          <figure><img src="static/images/qualitative/add_success_original.png" loading="lazy" alt="Original diagram"><figcaption>Original</figcaption></figure>
+          <figure><img src="static/images/qualitative/add_success_instruction.png" loading="lazy" alt="Visual instruction"><figcaption>Visual instruction</figcaption></figure>
+          <figure><img src="static/images/qualitative/add_success_output.png" loading="lazy" alt="Model output"><figcaption>Model output</figcaption></figure>
+        </div>
+        <div class="vb-triplet"><span class="vb-result is-failure"><i class="fas fa-times"></i> Failure</span>
+          <figure><img src="static/images/qualitative/add_failure_original.png" loading="lazy" alt="Original diagram"><figcaption>Original</figcaption></figure>
+          <figure><img src="static/images/qualitative/add_failure_instruction.png" loading="lazy" alt="Visual instruction"><figcaption>Visual instruction</figcaption></figure>
+          <figure><img src="static/images/qualitative/add_failure_output.png" loading="lazy" alt="Model output"><figcaption>Model output</figcaption></figure>
+        </div>
+      </div>
+      <div class="vb-tab-panel" data-panel="remove">
+        <div class="vb-triplet"><span class="vb-result is-success"><i class="fas fa-check"></i> Success</span>
+          <figure><img src="static/images/qualitative/remove_success_original.png" loading="lazy" alt="Original diagram"><figcaption>Original</figcaption></figure>
+          <figure><img src="static/images/qualitative/remove_success_instruction.png" loading="lazy" alt="Visual instruction"><figcaption>Visual instruction</figcaption></figure>
+          <figure><img src="static/images/qualitative/remove_success_output.png" loading="lazy" alt="Model output"><figcaption>Model output</figcaption></figure>
+        </div>
+        <div class="vb-triplet"><span class="vb-result is-failure"><i class="fas fa-times"></i> Failure</span>
+          <figure><img src="static/images/qualitative/remove_failure_original.png" loading="lazy" alt="Original diagram"><figcaption>Original</figcaption></figure>
+          <figure><img src="static/images/qualitative/remove_failure_instruction.png" loading="lazy" alt="Visual instruction"><figcaption>Visual instruction</figcaption></figure>
+          <figure><img src="static/images/qualitative/remove_failure_output.png" loading="lazy" alt="Model output"><figcaption>Model output</figcaption></figure>
+        </div>
+      </div>
+      <div class="vb-tab-panel" data-panel="update">
+        <div class="vb-triplet"><span class="vb-result is-success"><i class="fas fa-check"></i> Success</span>
+          <figure><img src="static/images/qualitative/update_success_original.png" loading="lazy" alt="Original diagram"><figcaption>Original</figcaption></figure>
+          <figure><img src="static/images/qualitative/update_success_instruction.png" loading="lazy" alt="Visual instruction"><figcaption>Visual instruction</figcaption></figure>
+          <figure><img src="static/images/qualitative/update_success_output.png" loading="lazy" alt="Model output"><figcaption>Model output</figcaption></figure>
+        </div>
+        <div class="vb-triplet"><span class="vb-result is-failure"><i class="fas fa-times"></i> Failure</span>
+          <figure><img src="static/images/qualitative/update_failure_original.png" loading="lazy" alt="Original diagram"><figcaption>Original</figcaption></figure>
+          <figure><img src="static/images/qualitative/update_failure_instruction.png" loading="lazy" alt="Visual instruction"><figcaption>Visual instruction</figcaption></figure>
+          <figure><img src="static/images/qualitative/update_failure_output.png" loading="lazy" alt="Model output"><figcaption>Model output</figcaption></figure>
+        </div>
+      </div>
+      <div class="vb-tab-panel" data-panel="layout">
+        <div class="vb-triplet"><span class="vb-result is-success"><i class="fas fa-check"></i> Success</span>
+          <figure><img src="static/images/qualitative/layout_success_original.png" loading="lazy" alt="Original diagram"><figcaption>Original</figcaption></figure>
+          <figure><img src="static/images/qualitative/layout_success_instruction.png" loading="lazy" alt="Visual instruction"><figcaption>Visual instruction</figcaption></figure>
+          <figure><img src="static/images/qualitative/layout_success_output.png" loading="lazy" alt="Model output"><figcaption>Model output</figcaption></figure>
+        </div>
+        <div class="vb-triplet"><span class="vb-result is-failure"><i class="fas fa-times"></i> Failure</span>
+          <figure><img src="static/images/qualitative/layout_failure_original.png" loading="lazy" alt="Original diagram"><figcaption>Original</figcaption></figure>
+          <figure><img src="static/images/qualitative/layout_failure_instruction.png" loading="lazy" alt="Visual instruction"><figcaption>Visual instruction</figcaption></figure>
+          <figure><img src="static/images/qualitative/layout_failure_output.png" loading="lazy" alt="Model output"><figcaption>Model output</figcaption></figure>
+        </div>
+      </div>
+      <div class="vb-tab-panel" data-panel="structure">
+        <div class="vb-triplet"><span class="vb-result is-success"><i class="fas fa-check"></i> Success</span>
+          <figure><img src="static/images/qualitative/structure_success_original.png" loading="lazy" alt="Original diagram"><figcaption>Original</figcaption></figure>
+          <figure><img src="static/images/qualitative/structure_success_instruction.png" loading="lazy" alt="Visual instruction"><figcaption>Visual instruction</figcaption></figure>
+          <figure><img src="static/images/qualitative/structure_success_output.png" loading="lazy" alt="Model output"><figcaption>Model output</figcaption></figure>
+        </div>
+        <div class="vb-triplet"><span class="vb-result is-failure"><i class="fas fa-times"></i> Failure</span>
+          <figure><img src="static/images/qualitative/structure_failure_original.png" loading="lazy" alt="Original diagram"><figcaption>Original</figcaption></figure>
+          <figure><img src="static/images/qualitative/structure_failure_instruction.png" loading="lazy" alt="Visual instruction"><figcaption>Visual instruction</figcaption></figure>
+          <figure><img src="static/images/qualitative/structure_failure_output.png" loading="lazy" alt="Model output"><figcaption>Model output</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End qualitative examples -->
 
 
 <!--BibTex citation -->
-  <section class="section" id="BibTeX">
+  <section class="section hero is-light" id="BibTeX">
     <div class="container is-max-desktop content">
       <div class="bibtex-header">
         <h2 class="title">BibTeX</h2>
@@ -480,16 +679,32 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
+      <!-- TODO: Update with the official proceedings entry once available -->
+      <pre id="bibtex-code"><code>@inproceedings{taneguchi2026viseditbench,
+  title={{VisEditBench}: A Benchmark for Vector-Format Diagram Editing with Visual Instructions},
+  author={Taneguchi, Akito and Yoshida, Haruto and Suzuki, Jun and Saito, Itsumi},
+  booktitle={Advances in Neural Information Processing Systems (NeurIPS), Evaluations and Datasets Track},
+  year={2026}
 }</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
+
+
+<!-- Acknowledgements -->
+<section class="section" id="acknowledgements">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-4">Acknowledgements</h2>
+    <p class="vb-ack">
+      This work was supported by JST PRESTO Grant Number JPMJFR242S, JST BOOST Grant Number JPMJBY24E3, and JSPS KAKENHI Grant Number 24K20829.
+      We thank BAOBAB Inc. for their contributions to the manual validation of generated editing instructions and edited diagrams, as well as the annotation of visual instructions.
+      We would also like to express our sincere gratitude to the members of the Tohoku NLP Group for their invaluable advice and support throughout this research.
+      This study was carried out using the TSUBAME4.0 supercomputer at Institute of Science Tokyo.
+    </p>
+  </div>
+</section>
+<!-- End acknowledgements -->
+  </main>
 
 
   <footer class="footer">
@@ -499,7 +714,7 @@
         <div class="content">
 
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
             You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
@@ -509,12 +724,6 @@
     </div>
   </div>
 </footer>
-
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
 
   </body>
   </html>

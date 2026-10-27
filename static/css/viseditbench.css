@@ -1,0 +1,433 @@
+/* VisEditBench page-specific styles (built on top of index.css) */
+:root {
+  --vb-add: #4a7bd0;
+  --vb-remove: #4caf50;
+  --vb-update: #d9661f;
+  --vb-layout: #c9649c;
+  --vb-structure: #9b3f91;
+  --vb-success: #15803d;
+  --vb-failure: #b91c1c;
+  --vb-best-bg: #dbeafe;
+  --vb-best-open-bg: #fef3c7;
+}
+
+.vb-name {
+  font-variant: small-caps;
+  font-weight: 700;
+}
+
+.publication-title .vb-name {
+  color: var(--primary-color);
+}
+
+.vb-affiliations .author-block {
+  margin-right: 0.75rem;
+}
+
+.vb-venue {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  background: var(--background-accent);
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Disabled link buttons until paper / code / dataset are released */
+.button.is-coming-soon {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.vb-coming-soon-note {
+  margin-top: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+/* Figures */
+.vb-figure {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.vb-after-figure {
+  margin-top: 1.5rem;
+}
+
+/* Center section titles so they line up with the centered underline from index.css */
+h2.title.is-3 {
+  text-align: center;
+}
+
+.vb-lead {
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.vb-note {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+/* Key numbers */
+.vb-stats-section {
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
+}
+
+.vb-stats {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.vb-stat {
+  text-align: center;
+  padding: 1rem 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background: var(--background-secondary);
+}
+
+.vb-stat-value {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+}
+
+.vb-stat-label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+}
+
+@media screen and (max-width: 768px) {
+  .vb-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Task input / output */
+.vb-io {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.vb-io-block {
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1rem 1.5rem;
+  background: var(--background-secondary);
+  min-width: 260px;
+}
+
+.vb-io-block ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.vb-io-title {
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.vb-io-arrow {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+}
+
+@media screen and (max-width: 768px) {
+  .vb-io-arrow {
+    transform: rotate(90deg);
+  }
+}
+
+/* Dataset stats */
+.vb-stats-row {
+  margin-top: 1rem;
+}
+
+.vb-small-table {
+  background: transparent;
+  font-size: 0.9rem;
+}
+
+.vb-tag {
+  display: inline-block;
+  padding: 0.05rem 0.5rem;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.tag-add { background: var(--vb-add); }
+.tag-remove { background: var(--vb-remove); }
+.tag-update { background: var(--vb-update); }
+.tag-layout { background: var(--vb-layout); }
+.tag-structure { background: var(--vb-structure); }
+
+/* Tabs */
+.vb-tabs a {
+  font-weight: 600;
+}
+
+/* Wrap the five edit-type tabs on narrow screens instead of scrolling */
+.vb-tabs ul {
+  flex-wrap: wrap;
+  flex-shrink: 1;
+  row-gap: 0.4rem;
+}
+
+.vb-tab-panel {
+  display: none;
+}
+
+.vb-tab-panel.is-active {
+  display: block;
+}
+
+.vb-example {
+  margin: 0;
+}
+
+.vb-example img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: #fff;
+  padding: 0.5rem;
+}
+
+.vb-example figcaption,
+.vb-triplet figcaption {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 0.35rem;
+}
+
+/* Evaluation cards */
+.vb-card {
+  height: 100%;
+  background: var(--background-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1.25rem 1.5rem;
+}
+
+.vb-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.vb-card-badge {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.05rem 0.5rem;
+  border-radius: 999px;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+.vb-card-badge.is-secondary {
+  background: var(--secondary-color);
+}
+
+.vb-metrics dt {
+  font-weight: 600;
+  margin-top: 0.6rem;
+}
+
+.vb-metrics dd {
+  margin: 0.1rem 0 0 0;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+}
+
+/* Leaderboard */
+.vb-leaderboard-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.vb-legend {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-left: 0.75rem;
+  font-size: 0.85rem;
+}
+
+.vb-swatch {
+  display: inline-block;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 3px;
+  border: 1px solid var(--border-color);
+}
+
+.vb-swatch.best { background: var(--vb-best-bg); }
+.vb-swatch.best-open { background: var(--vb-best-open-bg); }
+
+.vb-sort-controls {
+  margin-bottom: 0.5rem;
+  text-align: right;
+}
+
+.vb-leaderboard {
+  font-size: 0.9rem;
+}
+
+.vb-leaderboard th,
+.vb-leaderboard td {
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.vb-leaderboard thead th[data-sort] {
+  cursor: pointer;
+  user-select: none;
+}
+
+.vb-leaderboard thead th[data-sort]:hover {
+  color: var(--primary-color);
+}
+
+.vb-leaderboard thead th.is-sorted {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.vb-leaderboard .vb-header-group th {
+  border-bottom-width: 1px;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.vb-leaderboard td.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.vb-leaderboard thead tr:last-child th:not(:first-child) {
+  text-align: right;
+}
+
+.vb-leaderboard td.best {
+  background: var(--vb-best-bg);
+  font-weight: 700;
+}
+
+.vb-leaderboard td.best-open {
+  background: var(--vb-best-open-bg);
+  font-weight: 700;
+}
+
+.vb-leaderboard tr.group-row td {
+  background: var(--background-accent);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+}
+
+.vb-leaderboard.is-sorted-view tr.group-row {
+  display: none;
+}
+
+/* Column separator between image-level and code-level */
+.vb-leaderboard th:nth-child(5),
+.vb-leaderboard td:nth-child(5) {
+  border-right: 2px solid var(--border-color);
+}
+
+.vb-leaderboard .vb-header-group th:nth-child(2) {
+  border-right: 2px solid var(--border-color);
+}
+
+.vb-findings {
+  margin-top: 1.5rem;
+}
+
+/* Analysis */
+.vb-analysis {
+  margin-top: 2rem;
+}
+
+.vb-analysis p {
+  margin-top: 0.75rem;
+  color: var(--text-primary);
+}
+
+/* Qualitative examples */
+.vb-triplet {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  padding: 2.25rem 1rem 1rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.vb-triplet figure {
+  margin: 0;
+}
+
+.vb-triplet img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  background: #fff;
+}
+
+.vb-result {
+  position: absolute;
+  top: 0.6rem;
+  left: 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.vb-result.is-success { color: var(--vb-success); }
+.vb-result.is-failure { color: var(--vb-failure); }
+
+@media screen and (max-width: 768px) {
+  .vb-triplet {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.vb-ack {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+}
